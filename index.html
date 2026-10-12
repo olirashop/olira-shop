@@ -20,12 +20,11 @@
 <style>
 /* ═══ TOKENS ═══ */
 :root{
-  --ink:#0b0a08;--ink2:#141210;--ink3:#1e1c19;
+  --ink:#0b0a08;--ink2:#141210;--ink3:#1e1c19;--ink-rgb:11,10,8;
   --gold:#c9a84c;--gold2:#e8c96a;--gold3:#f5e0a0;
   --rose:#d4a0b0;--rose2:#e8b8c8;
   --gold-rgb:201,168,76;--rose-rgb:212,160,176;
   --on-gold:#0b0a08;--on-rose:#0b0a08;
-  --ink-rgb:11,10,8;--text-rgb:247,243,236;--r:0px;
   --cream:#f7f3ec;--cream2:#ede6d8;--smoke:#9b958a;
   --border:rgba(var(--gold-rgb),.18);--border2:rgba(var(--gold-rgb),.35);
   --danger:#e06a6a;--success:#4a9e6f;
@@ -151,7 +150,7 @@ header{position:sticky;top:0;z-index:200;height:var(--hh);background:rgba(var(--
 .arrow{width:34px;height:34px;background:rgba(var(--ink-rgb),.8);border:none;color:var(--cream);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:all var(--fast)}
 .arrow:hover{background:var(--gold);color:var(--on-gold)}
 .dots{position:absolute;bottom:.55rem;left:0;right:0;display:flex;gap:.3rem;justify-content:center;pointer-events:none}
-.dot{width:5px;height:5px;border-radius:50%;background:rgba(var(--text-rgb),.4);transition:all var(--fast)}
+.dot{width:5px;height:5px;border-radius:50%;background:rgba(247,243,236,.4);transition:all var(--fast)}
 .dot.on{background:var(--gold);width:14px;border-radius:3px}
 .tags{position:absolute;top:.6rem;right:.6rem;z-index:2;display:flex;flex-direction:column;gap:.3rem;align-items:flex-start;pointer-events:none}
 .tag-sale{background:var(--gold);color:var(--on-gold);font-size:.75rem;font-weight:700;padding:.15rem .55rem}
@@ -191,7 +190,7 @@ header{position:sticky;top:0;z-index:200;height:var(--hh);background:rgba(var(--
 .fly{position:fixed;width:12px;height:12px;border-radius:50%;background:var(--rose);pointer-events:none;z-index:9000;transition:left .65s var(--ease),top .65s var(--ease),opacity .65s,transform .65s;box-shadow:0 0 12px var(--rose)}
 
 /* ═══ DETAIL MODAL ═══ */
-.det-ov{position:fixed;inset:0;background:rgba(var(--ink-rgb),.93);z-index:600;display:none;align-items:center;justify-content:center;padding:1rem}
+.det-ov{position:fixed;inset:0;background:rgba(7,6,5,.93);z-index:600;display:none;align-items:center;justify-content:center;padding:1rem}
 .det-ov.open{display:flex}
 .det-modal{background:var(--ink2);border:1px solid var(--border);width:920px;max-width:100%;max-height:92vh;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;position:relative}
 .det-imgs{background:var(--ink3);position:relative;overflow-y:auto}
@@ -221,7 +220,7 @@ header{position:sticky;top:0;z-index:200;height:var(--hh);background:rgba(var(--
 .zoom-ov img{max-width:96vw;max-height:92vh;object-fit:contain}
 
 /* ═══ SIZE GUIDE ═══ */
-.tailles-ov{position:fixed;inset:0;background:rgba(var(--ink-rgb),.93);z-index:800;display:none;align-items:center;justify-content:center;padding:1rem}
+.tailles-ov{position:fixed;inset:0;background:rgba(7,6,5,.93);z-index:800;display:none;align-items:center;justify-content:center;padding:1rem}
 .tailles-ov.open{display:flex}
 .tailles-box{background:var(--ink2);border:1px solid var(--border);width:520px;max-width:100%;max-height:88vh;overflow:auto;padding:1.75rem;position:relative}
 .tailles-x{position:absolute;top:.6rem;left:.6rem;background:none;border:none;color:var(--smoke);cursor:pointer;font-size:1.6rem;width:44px;height:44px;transition:color var(--fast)}
@@ -271,7 +270,7 @@ header{position:sticky;top:0;z-index:200;height:var(--hh);background:rgba(var(--
 .deliv-hint{font-size:.8rem;color:var(--smoke);text-align:center;margin-bottom:.8rem;line-height:1.7}
 
 /* ═══ QUICK CHECKOUT SHEET ═══ */
-.quick-ov{position:fixed;inset:0;background:rgba(var(--ink-rgb),.88);z-index:700;display:none;align-items:flex-end;justify-content:center}
+.quick-ov{position:fixed;inset:0;background:rgba(7,6,5,.88);z-index:700;display:none;align-items:flex-end;justify-content:center}
 .quick-ov.open{display:flex}
 .quick-sheet{background:var(--ink2);border-top:2px solid var(--rose);width:100%;max-width:560px;max-height:94svh;overflow-y:auto;animation:sheetUp .35s var(--ease)}
 @keyframes sheetUp{from{transform:translateY(100%)}to{transform:none}}
@@ -340,7 +339,7 @@ footer{background:var(--ink2);border-top:1px solid var(--border);padding:2.5rem 
 /* ═══ HERO EXTRAS ═══ */
 .hero.has-img{min-height:min(78svh,640px)}
 .hero-img{background-size:cover;background-position:center}
-.hero-ov{background:rgba(var(--ink-rgb),var(--ov,.55))}
+.hero-ov{background:rgba(11,10,8,var(--ov,.55))}
 .hero-title{font-size:clamp(1.8rem,5vw,3rem);font-weight:700;line-height:1.35;margin-bottom:.8rem;max-width:760px}
 
 /* ═══ SORT / RAIL ═══ */
@@ -361,7 +360,7 @@ footer{background:var(--ink2);border-top:1px solid var(--border);padding:2.5rem 
 .blk-text.bg-accent .blk-body{color:inherit}
 .blk-text.bg-accent .btn-gold{background:var(--on-gold);color:var(--gold)}
 .blk-banner{position:relative;min-height:300px;display:flex;align-items:center;background:var(--ink3) center/cover no-repeat;overflow:hidden}
-.blk-banner .bn-ov{position:absolute;inset:0;background:rgba(var(--ink-rgb),.5)}
+.blk-banner .bn-ov{position:absolute;inset:0;background:rgba(11,10,8,.5)}
 .blk-banner .blk-in{width:100%}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.5rem}
 .gal img{width:100%;aspect-ratio:1;object-fit:cover;cursor:zoom-in;transition:transform var(--normal)}
@@ -496,79 +495,101 @@ footer{background:var(--ink2);border-top:1px solid var(--border);padding:2.5rem 
 .ship-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--rose));transition:width var(--slow) var(--ease)}
 .ship-ok{font-size:.8rem;color:var(--success);text-align:center;margin-bottom:.6rem;font-weight:600}
 
-/* ═══ THEME EXTRAS (ثيم كامل + خيارات) ═══ */
-html.rnd .grid{gap:.7rem;background:none;border:none}
-html.rnd .card{border:1px solid var(--border)}
-.card,.btn-gold,.btn-ghost,.btn-add,.btn-checkout,.sz,.chip,.det-modal,.cart-drw,.quick-sheet,.quick-summary,.quick-total,.c-item,.faq details,.sort-sel,.code-row input,.code-row button,.tag-sale,.tag-badge,.tailles-box,.ic-btn{border-radius:var(--r)}
-.no-wish .ic-btn.wish,.no-share .ic-btn.share{display:none!important}
-@media(max-width:640px){html.cols1 .grid{grid-template-columns:1fr}}
-.announce.paused{background:var(--danger);color:#fff}
-.btn-checkout:disabled{opacity:.45;cursor:not-allowed}
-.maint{position:fixed;inset:0;z-index:9000;background:var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
-.maint-in{max-width:460px;display:flex;flex-direction:column;align-items:center;gap:1rem}
-.maint-logo{height:120px;width:auto;max-width:70vw;object-fit:contain}
-.maint h1{font-size:1.6rem;font-family:var(--font-t);color:var(--cream)}
-.maint p{color:var(--cream2);line-height:1.9;opacity:.85}
-.wel-ov{position:fixed;inset:0;z-index:650;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:1rem}
-.wel-ov.open{display:flex}
-.wel-box{position:relative;background:var(--ink2);border:1px solid var(--border2);max-width:400px;width:100%;padding:2rem 1.5rem 1.5rem;text-align:center;border-radius:max(var(--r),14px);animation:sheetUp .4s var(--ease);box-shadow:0 20px 60px rgba(0,0,0,.45)}
-.wel-x{position:absolute;top:.4rem;left:.5rem;width:40px;height:40px;background:none;border:none;color:var(--smoke);font-size:1.6rem;cursor:pointer}
-.wel-emo{font-size:2.6rem;margin-bottom:.4rem}
-.wel-box h3{font-size:1.4rem;font-family:var(--font-t);color:var(--cream);margin-bottom:.5rem}
-.wel-box p{color:var(--cream2);line-height:1.9;font-size:.95rem;margin-bottom:1rem;white-space:pre-line}
-.wel-code{display:inline-block;border:2px dashed var(--gold);color:var(--gold);padding:.4rem 1.2rem;font-weight:800;letter-spacing:.15em;margin-bottom:1rem;font-size:1.15rem;direction:ltr}
+/* ═══ THEME SAFETY: text over images stays light ═══ */
+.hero.has-img,.blk-banner{--cream:#f7f3ec;--cream2:#ede6d8;--smoke:#cfc9bd}
 
-/* ═══ SPECIAL PACKS (الباكات الخاصة) ═══ */
-.packs{padding-bottom:1.5rem}
-.pk-rail{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;padding:1.4rem .35rem 1.2rem}
-.pk{--pk1:var(--gold);--pk2:var(--gold3);--pk-rgb:var(--gold-rgb);--pk-on:var(--on-gold);flex:0 0 min(340px,86vw);scroll-snap-align:start;position:relative;padding:3px;border-radius:20px;background:linear-gradient(135deg,var(--pk1),var(--pk2),var(--pk1));background-size:220% 220%;animation:pkBorder 5s linear infinite,pkGlow 2.4s ease-in-out infinite;display:flex}
-.pk-in{background:var(--ink2);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;width:100%;position:relative}
-.pk.out{filter:grayscale(.7);opacity:.75;animation:none}
-.pk-badge{position:absolute;top:3px;inset-inline-start:16px;z-index:4;background:linear-gradient(135deg,var(--pk1),var(--pk2));color:var(--pk-on);font-weight:800;font-size:.82rem;padding:.4rem .95rem .5rem;border-radius:0 0 12px 12px;box-shadow:0 6px 16px rgba(var(--pk-rgb),.45);animation:pkSwing 2.2s ease-in-out infinite;transform-origin:top center;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pk-deco{position:absolute;top:-16px;inset-inline-end:10px;z-index:5;font-size:2.1rem;line-height:1;animation:pkFlame 1s ease-in-out infinite alternate;filter:drop-shadow(0 0 10px rgba(var(--pk-rgb),.9));pointer-events:none}
-.pk-imgs{display:grid;gap:2px;aspect-ratio:16/11;background:var(--ink3);position:relative}
-.pk-imgs img{width:100%;height:100%;object-fit:cover;display:block;min-height:0}
-.pk-imgs.n1{grid-template-columns:1fr}
-.pk-imgs.n2{grid-template-columns:1fr 1fr}
-.pk-imgs.n3{grid-template-columns:1.3fr 1fr;grid-template-rows:1fr 1fr}
-.pk-imgs.n3 img:first-child{grid-row:1/3}
-.pk-imgs.n4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
-.pk-save{position:absolute;bottom:.6rem;inset-inline-start:.6rem;z-index:2;width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--pk1),var(--pk2));color:var(--pk-on);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1rem;box-shadow:0 4px 14px rgba(var(--pk-rgb),.5);border:2px solid rgba(255,255,255,.85);transform:rotate(-8deg);direction:ltr}
-.pk-body{padding:1rem 1.1rem 1.15rem;display:flex;flex-direction:column;gap:.75rem;flex:1}
-.pk-name{font-family:var(--font-t);font-size:1.25rem;font-weight:800;color:var(--cream);line-height:1.4}
-.pk-desc{font-size:.85rem;color:var(--cream2);opacity:.8;line-height:1.8}
-.pk-items{list-style:none;display:flex;flex-direction:column;gap:.4rem}
-.pk-items li{display:flex;align-items:center;gap:.5rem;font-size:.88rem;color:var(--cream)}
-.pk-ck{flex:0 0 20px;height:20px;border-radius:50%;background:rgba(var(--pk-rgb),.18);color:var(--pk1);font-size:.7rem;display:flex;align-items:center;justify-content:center;font-weight:800}
-.pk-nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.pk-sz{background:var(--ink3);color:var(--cream);border:1px solid var(--border2);padding:.25rem .4rem;font-size:.8rem;border-radius:8px;max-width:100px;cursor:pointer}
-.pk-sz.err{border-color:var(--danger);box-shadow:0 0 0 2px rgba(224,106,106,.3)}
-.pk-prices{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
-.pk-now{font-size:1.7rem;font-weight:800;color:var(--pk1);line-height:1}
-.pk-was{font-size:1rem;color:var(--smoke);text-decoration:line-through}
-.pk-gain{font-size:.76rem;font-weight:700;background:rgba(var(--pk-rgb),.14);color:var(--pk1);padding:.15rem .6rem;border-radius:20px}
-.pk-cd-wrap{background:rgba(var(--pk-rgb),.07);border:1px dashed rgba(var(--pk-rgb),.5);border-radius:12px;padding:.55rem .5rem .6rem;text-align:center}
-.pk-cd-l{font-size:.74rem;color:var(--cream2);margin-bottom:.35rem;font-weight:600}
-.pk-cd{display:flex;gap:.4rem;justify-content:center;direction:ltr}
-.pk-cd span{min-width:46px;padding:.3rem .2rem .25rem;border-radius:9px;background:var(--ink);border:1px solid rgba(var(--pk-rgb),.45);display:flex;flex-direction:column;align-items:center;line-height:1.1}
-.pk-cd b{font-size:1.15rem;font-weight:800;color:var(--pk1);font-variant-numeric:tabular-nums}
-.pk-cd i{font-style:normal;font-size:.58rem;color:var(--smoke);margin-top:.1rem}
-.pk-cd-wrap.urgent{animation:pkUrgent 1s ease-in-out infinite}
-.pk-note{text-align:center;font-weight:800;font-size:.85rem;color:var(--pk1);animation:pkPulse 1.6s ease-in-out infinite}
-.pk-btn{position:relative;overflow:hidden;min-height:48px;border:none;cursor:pointer;border-radius:12px;background:linear-gradient(135deg,var(--pk1),var(--pk2));color:var(--pk-on);font-size:1rem;font-weight:800;box-shadow:0 8px 22px rgba(var(--pk-rgb),.35);transition:transform var(--fast)}
-.pk-btn::after{content:'';position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:pkShine 2.8s ease-in-out infinite}
-.pk-btn:hover:not(:disabled){transform:translateY(-2px)}
-.pk-btn:disabled{opacity:.5;cursor:not-allowed}
-.pk-btn:disabled::after{display:none}
-@keyframes pkBorder{0%{background-position:0% 50%}100%{background-position:220% 50%}}
-@keyframes pkGlow{0%,100%{box-shadow:0 0 12px rgba(var(--pk-rgb),.28)}50%{box-shadow:0 0 30px rgba(var(--pk-rgb),.6)}}
-@keyframes pkSwing{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
-@keyframes pkFlame{from{transform:translateY(0) scale(1) rotate(-6deg)}to{transform:translateY(-4px) scale(1.14) rotate(6deg)}}
-@keyframes pkShine{0%{left:-60%}55%,100%{left:140%}}
-@keyframes pkPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(1.04)}}
-@keyframes pkUrgent{0%,100%{border-color:rgba(var(--pk-rgb),.5)}50%{border-color:var(--danger);background:rgba(224,106,106,.1)}}
-@media(prefers-reduced-motion:reduce){.pk,.pk-badge,.pk-deco,.pk-note,.pk-btn::after,.pk-cd-wrap.urgent{animation:none!important}}
-@media(max-width:640px){.pk-rail{gap:.8rem}.pk-now{font-size:1.5rem}}
+/* ═══ SPECIAL PACKS ═══ */
+.pack{--pk1:var(--gold);--pk2:var(--rose);--pk-on:#1a0d00;position:relative;padding:2px;min-width:0;background:linear-gradient(90deg,var(--pk1),var(--pk2),var(--pk1));background-size:200% 100%;animation:pkBorder 6s linear infinite}
+.pack.st-flame{--pk1:#ff5a14;--pk2:#ffc247;--pk-on:#1a0d00}
+.pack.st-royal{--pk1:var(--gold);--pk2:var(--gold3);--pk-on:var(--on-gold)}
+.pack.st-rose{--pk1:#ff5c8a;--pk2:#ffb3c7;--pk-on:#2a0714}
+.pack.st-sale{--pk1:#e02e2e;--pk2:#ff8a5c;--pk-on:#fff}
+.pack.off{animation:none;filter:grayscale(.65);opacity:.8}
+.pack-in{background:var(--ink2);height:100%;display:grid;grid-template-columns:minmax(0,1fr);position:relative;overflow:hidden}
+.packs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,330px),1fr));gap:1.4rem}
+.pack-media{position:relative;aspect-ratio:4/3;background:var(--ink3) center/cover no-repeat;overflow:hidden}
+.pack-media.collage{display:grid;grid-template-columns:repeat(var(--n,2),minmax(0,1fr));gap:2px}
+.pack-media.collage img{width:100%;height:100%;object-fit:cover;display:block}
+.pack-ribbon{position:absolute;top:.8rem;right:.8rem;z-index:2;background:linear-gradient(90deg,var(--pk1),var(--pk2));color:var(--pk-on);font-weight:800;font-size:.82rem;padding:.3rem .85rem;display:flex;align-items:center;gap:.4rem;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.pack-ribbon .fl{display:inline-block;animation:pkFlame 1.1s ease-in-out infinite}
+.pack-stamp{position:absolute;bottom:.8rem;left:.8rem;z-index:2;width:66px;height:66px;border-radius:50%;background:var(--ink);color:var(--pk1);border:2px solid var(--pk1);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1.05;transform:rotate(-9deg);box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.pack-stamp span{font-size:1.1rem;direction:ltr}
+.pack-stamp small{font-size:.62rem;font-weight:600;color:var(--cream2)}
+.pack-body{padding:1.25rem 1.25rem 1.4rem;display:flex;flex-direction:column;gap:.9rem;min-width:0}
+.pack-name{font-family:var(--font-t);font-size:1.45rem;font-weight:700;line-height:1.3;color:var(--cream)}
+.pack-tag{color:var(--smoke);font-size:.9rem;line-height:1.7;margin-top:-.45rem}
+.pack-items{list-style:none;border:1px solid var(--border)}
+.pack-items li{display:flex;align-items:center;gap:.7rem;padding:.5rem .7rem;border-bottom:1px solid var(--border);font-size:.88rem}
+.pack-items li:last-child{border-bottom:none}
+.pack-items img,.pack-items .pi-ph{width:38px;height:48px;object-fit:cover;flex:0 0 auto;background:var(--ink3);display:block}
+.pack-items .pi-n{flex:1;min-width:0;line-height:1.4}
+.pack-items .pi-u{font-size:.76rem;color:var(--smoke);white-space:nowrap}
+.pack-items select{background:var(--ink);color:var(--cream);border:1px solid var(--border2);padding:.3rem .4rem;font-size:.82rem;min-height:36px;max-width:112px}
+.pack-items select.err{border-color:var(--danger);box-shadow:0 0 0 2px rgba(224,106,106,.25)}
+.pack-prices{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap}
+.pk-now{font-size:1.9rem;font-weight:800;color:var(--pk1);line-height:1}
+.pk-was{color:var(--smoke);text-decoration:line-through;font-size:1rem}
+.pk-save{background:rgba(var(--gold-rgb),.16);color:var(--cream);font-size:.78rem;padding:.15rem .6rem;font-weight:700}
+.pack-note{font-size:.84rem;color:var(--pk1);font-weight:700}
+.pack-cd{display:flex;align-items:stretch;gap:.5rem;flex-wrap:wrap}
+.pack-cd .pc-l{flex:1 0 100%;font-size:.78rem;color:var(--smoke)}
+.pc-box{min-width:54px;text-align:center;background:var(--ink);border:1px solid var(--border2);padding:.35rem .3rem}
+.pc-box b{display:block;font-size:1.25rem;line-height:1.15;font-variant-numeric:tabular-nums;color:var(--cream);direction:ltr}
+.pc-box i{display:block;font-style:normal;font-size:.62rem;color:var(--smoke)}
+.pack-cd.urgent .pc-box{border-color:var(--danger)}
+.pack-cd.urgent .pc-box b{color:var(--danger)}
+.pack-btn{width:100%;min-height:50px;background:linear-gradient(90deg,var(--pk1),var(--pk2));color:var(--pk-on);border:none;font-weight:800;font-size:1rem;cursor:pointer;transition:filter var(--fast),transform var(--fast)}
+.pack-btn:hover:not(:disabled){filter:brightness(1.08)}
+.pack-btn:active:not(:disabled){transform:scale(.99)}
+.pack-btn:disabled{filter:grayscale(1);opacity:.5;cursor:not-allowed}
+@keyframes pkBorder{from{background-position:0 50%}to{background-position:200% 50%}}
+@keyframes pkFlame{0%,100%{transform:translateY(0) scale(1) rotate(-4deg)}50%{transform:translateY(-2px) scale(1.2) rotate(5deg)}}
+@media(min-width:820px){
+  .packs-grid.one .pack-in{grid-template-columns:minmax(280px,1fr) minmax(0,1.15fr)}
+  .packs-grid.one .pack-media{aspect-ratio:auto;min-height:100%}
+  .packs-grid.one .pack-body{padding:1.8rem}
+}
+@media(max-width:600px){
+  /* هاتف: باكان في كل صف، بطاقات مضغوطة */
+  .packs-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+  .packs-grid.one{grid-template-columns:minmax(0,1fr)}
+  .pack-media{aspect-ratio:1/1}
+  .packs-grid.one .pack-media{aspect-ratio:16/10}
+  .pack-ribbon{top:.4rem;right:.4rem;font-size:.62rem;padding:.15rem .45rem;gap:.25rem}
+  .pack-stamp{width:44px;height:44px;bottom:.4rem;left:.4rem;border-width:1.5px}
+  .pack-stamp span{font-size:.78rem}.pack-stamp small{font-size:.5rem}
+  .pack-body{padding:.65rem .6rem .75rem;gap:.5rem}
+  .pack-name{font-size:.92rem;line-height:1.35}
+  .pack-tag{display:none}
+  .pack-items li{flex-wrap:wrap;gap:.3rem .4rem;padding:.3rem .4rem;font-size:.74rem}
+  .pack-items img,.pack-items .pi-ph{display:none}
+  .pack-items .pi-n{flex:1 0 100%;line-height:1.3}
+  .pack-items select{width:100%;max-width:none;min-height:30px;font-size:.74rem;padding:.15rem .25rem}
+  .pack-items .pi-u{font-size:.66rem;white-space:normal}
+  .pk-now{font-size:1.15rem}.pk-was{font-size:.76rem}
+  .pk-save{font-size:.64rem;padding:.1rem .35rem}
+  .pack-note{font-size:.7rem}
+  .pack-cd{gap:.25rem;flex-wrap:nowrap}
+  .pack-cd .pc-l{flex:1 0 100%;font-size:.64rem}
+  .pc-box{min-width:0;flex:1;padding:.2rem .1rem}
+  .pc-box b{font-size:.82rem}.pc-box i{font-size:.5rem}
+  .pack-cd{flex-wrap:wrap}
+  .pack-btn{min-height:40px;font-size:.8rem}
+  .packs-grid.one .pack-name{font-size:1.1rem}
+  .packs-grid.one .pack-tag{display:block}
+  .packs-grid.one .pack-items img,.packs-grid.one .pack-items .pi-ph{display:block}
+  .packs-grid.one .pack-items li{flex-wrap:nowrap}
+  .packs-grid.one .pack-items .pi-n{flex:1 1 auto}
+  .packs-grid.one .pack-items select{width:auto;max-width:110px}
+}
+@media(prefers-reduced-motion:reduce){.pack{animation:none}.pack-ribbon .fl{animation:none}}
+
+/* ═══ ENTRY POPUP ═══ */
+.pop-box{text-align:center;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+.pop-box h3{text-align:center!important;margin-bottom:0!important;font-size:1.5rem!important}
+.pop-text{color:var(--cream2);line-height:1.9;white-space:pre-line}
+.pop-code{border:1px dashed var(--gold);padding:.6rem 1.2rem;font-weight:800;letter-spacing:.12em;color:var(--gold);font-size:1.25rem;direction:ltr}
+.pop-box .btn-gold,.pop-box .btn-ghost{min-width:200px;text-align:center;justify-content:center}
 </style>
 </head>
 <body>
@@ -579,7 +600,6 @@ html.rnd .card{border:1px solid var(--border)}
 </div>
 
 <div class="announce" id="announce" hidden></div>
-<div class="announce paused" id="paused-bar" hidden></div>
 
 <header>
   <div class="h-start">
@@ -716,27 +736,18 @@ html.rnd .card{border:1px solid var(--border)}
   </div>
 </div>
 
+<div class="tailles-ov pol-ov" id="pop-ov" role="dialog" aria-modal="true" onclick="if(event.target===this)closePop()">
+  <div class="tailles-box pop-box">
+    <button class="tailles-x" onclick="closePop()" aria-label="إغلاق">×</button>
+    <h3 id="pop-title"></h3>
+    <p class="pop-text" id="pop-text"></p>
+    <div class="pop-code" id="pop-code" hidden></div>
+    <button type="button" class="btn-ghost" id="pop-copy" hidden onclick="popUseCode()">نسخ الكود وتطبيقه</button>
+    <a class="btn-gold" id="pop-btn" hidden></a>
+  </div>
+</div>
+
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<div class="maint" id="maint" hidden>
-  <div class="maint-in">
-    <img class="maint-logo js-logo" alt=""/>
-    <h1 id="maint-t"></h1>
-    <p id="maint-m"></p>
-    <a id="maint-wa" class="btn-gold" target="_blank" rel="noopener">تواصلي معنا عبر واتساب</a>
-  </div>
-</div>
-
-<div class="wel-ov" id="wel-ov" onclick="if(event.target===this)closeWelcome()">
-  <div class="wel-box" role="dialog" aria-modal="true" aria-labelledby="wel-t">
-    <button class="wel-x" onclick="closeWelcome()" aria-label="إغلاق">×</button>
-    <div class="wel-emo">🎁</div>
-    <h3 id="wel-t"></h3>
-    <p id="wel-m"></p>
-    <div class="wel-code" id="wel-code" hidden></div><br/>
-    <button class="btn-gold" id="wel-btn" onclick="closeWelcome(true)"></button>
-  </div>
-</div>
 
 <script src="store-data.js"></script>
 <script>
@@ -753,7 +764,7 @@ const DEF_SETTINGS={
   showSort:true,
   blocks:[
     {id:'hero',type:'hero',on:true},
-    {id:'packs',type:'packs',on:true,title:'الباكات الخاصة',sub:'عروض لفترة محدودة ⏳'},
+    {id:'packs',type:'packs',on:true,title:'باكات خاصة',sub:'عروض لفترة محدودة — لا تفوّتيها'},
     {id:'featured',type:'featured',on:true,title:'المنتجات المقترحة',sub:'اختيارنا لك'},
     {id:'catalogue',type:'catalogue',on:true},
     {id:'trust',type:'trust',on:true}
@@ -796,13 +807,7 @@ const DEF_SETTINGS={
   catOrder:[],
   offers:[],stackCode:true,
   waThanks:'شكراً على طلبك! سنتواصل معك قريباً ✅',
-  seoTitle:'',seoDesc:'',
-  bg:'#0b0a08',textColor:'#f7f3ec',radius:0,
-  packs:[],
-  maintenance:false,maintenanceMsg:'نقوم ببعض التحسينات على المتجر. سنعود قريباً 💛',
-  ordersPaused:false,ordersPausedMsg:'استقبال الطلبات متوقف مؤقتاً. يمكنك تصفح المنتجات والعودة لاحقاً 💛',minOrder:0,
-  hideSoldOut:false,mobCols:2,showRecent:true,showWish:true,showShare:true,
-  welcomeOn:false,welcomeTitle:'',welcomeText:'',welcomeCode:'',welcomeBtn:'',welcomeDelay:3
+  seoTitle:'',seoDesc:''
 };
 const FONTS={
   'Cairo':'Cairo:wght@400;500;600;700','Tajawal':'Tajawal:wght@400;500;700','Almarai':'Almarai:wght@400;700',
@@ -893,7 +898,6 @@ function itemCat(c){
   const p=allProducts().find(x=>x.id===c.pid);return p?String(p.category||'').trim():'';
 }
 function inScope(o,c){
-  if(c.pack&&o.type!=='freeship')return false;
   const sc=o.scope||'all';
   if(sc==='cats')return (o.cats||[]).includes(itemCat(c));
   if(sc==='products')return (o.pids||[]).includes(c.pid);
@@ -902,7 +906,7 @@ function inScope(o,c){
 function unitsOf(items){const u=[];items.forEach(c=>{for(let i=0;i<c.qty;i++)u.push(c.price);});return u;}
 function offerAmount(o,items,sub){
   if(o.minOrder&&sub<num(o.minOrder,0))return 0;
-  const el=unitsOf(items.filter(c=>inScope(o,c)));
+  const el=unitsOf(items.filter(c=>!c.pack&&inScope(o,c)));
   if(!el.length)return 0;
   const es=el.reduce((s,x)=>s+x,0);
   if(o.type==='auto'){
@@ -959,10 +963,10 @@ function calcCart(items,codeStr){
     if(!o||o.on===false)info={status:'invalid',msg:'الكود غير صحيح'};
     else if(!offerActive(o))info={status:'expired',msg:codeWhy(o)};
     else if(o.minOrder&&sub<num(o.minOrder,0))info={status:'min',msg:'الحد الأدنى للطلب لهذا الكود: '+o.minOrder+' '+cur()};
-    else if(!items.some(c=>inScope(o,c)))info={status:'scope',msg:'هذا الكود لا ينطبق على المنتجات الموجودة في سلتك'};
+    else if(!items.some(c=>(o.kind==='freeship'||!c.pack)&&inScope(o,c)))info={status:'scope',msg:'هذا الكود لا ينطبق على المنتجات الموجودة في سلتك'};
     else{
-      const el=items.filter(c=>inScope(o,c)).reduce((s,c)=>s+c.price*c.qty,0);
-      const ratio=(S.stackCode===false||!auto||sub<=0)?1:(sub-auto.amount)/sub;
+      const el=items.filter(c=>!c.pack&&inScope(o,c)).reduce((s,c)=>s+c.price*c.qty,0);
+      const subNP=items.filter(c=>!c.pack).reduce((s,c)=>s+c.price*c.qty,0);const ratio=(S.stackCode===false||!auto||subNP<=0)?1:Math.max(0,(subNP-auto.amount)/subNP);
       let amt=0;
       if(o.kind==='percent')amt=Math.round(el*ratio*Math.min(100,num(o.value,0))/100);
       else if(o.kind==='fixed')amt=Math.min(Math.round(el*ratio),num(o.value,0));
@@ -995,33 +999,29 @@ const hexStr=c=>'#'+c.map(v=>v.toString(16).padStart(2,'0')).join('');
 const lumOf=c=>0.299*c[0]+0.587*c[1]+0.114*c[2];
 function applyTheme(){
   const g=hex2rgb(S.accent)||[201,168,76],r=hex2rgb(S.accent2)||[212,160,176];
-  const bg=hex2rgb(S.bg)||[11,10,8],tx=hex2rgb(S.textColor)||[247,243,236];
   const st=document.documentElement.style,W=[255,255,255];
-  const dark=lumOf(bg)<140;
   st.setProperty('--gold',hexStr(g));st.setProperty('--gold2',hexStr(mix(g,W,.22)));st.setProperty('--gold3',hexStr(mix(g,W,.55)));
   st.setProperty('--rose',hexStr(r));st.setProperty('--rose2',hexStr(mix(r,W,.25)));
   st.setProperty('--gold-rgb',g.join(','));st.setProperty('--rose-rgb',r.join(','));
   st.setProperty('--on-gold',lumOf(g)>150?'#0b0a08':'#ffffff');
   st.setProperty('--on-rose',lumOf(r)>150?'#0b0a08':'#ffffff');
-  /* خلفية ونصوص الموقع */
-  st.setProperty('--ink',hexStr(bg));
-  st.setProperty('--ink2',hexStr(mix(bg,tx,dark?.045:.04)));
-  st.setProperty('--ink3',hexStr(mix(bg,tx,dark?.09:.08)));
-  st.setProperty('--cream',hexStr(tx));
-  st.setProperty('--cream2',hexStr(mix(tx,bg,.1)));
-  st.setProperty('--smoke',hexStr(mix(tx,bg,.38)));
-  st.setProperty('--ink-rgb',bg.join(','));st.setProperty('--text-rgb',tx.join(','));
-  st.setProperty('--r',Math.max(0,Math.min(28,num(S.radius,0)))+'px');
-  st.setProperty('color-scheme',dark?'dark':'light');
-  document.documentElement.classList.toggle('light',!dark);
-  const tc=document.querySelector('meta[name=theme-color]');if(tc)tc.setAttribute('content',hexStr(bg));
+  // خلفية ونص الموقع كاملاً (اختياري) — إذا لم تُحدَّد تبقى الألوان الأصلية
+  ['--ink','--ink2','--ink3','--cream','--cream2','--smoke','--ink-rgb'].forEach(k=>st.removeProperty(k));
+  const bg=hex2rgb(S.bgColor);let tc='#0b0a08';
+  if(bg){
+    const dark=lumOf(bg)<140,tx=hex2rgb(S.textColor)||(dark?[247,243,236]:[28,24,20]);
+    st.setProperty('--ink',hexStr(bg));st.setProperty('--ink2',hexStr(mix(bg,tx,.06)));st.setProperty('--ink3',hexStr(mix(bg,tx,.12)));
+    st.setProperty('--cream',hexStr(tx));st.setProperty('--cream2',hexStr(mix(tx,bg,.14)));st.setProperty('--smoke',hexStr(mix(tx,bg,.42)));
+    st.setProperty('--ink-rgb',bg.join(','));tc=hexStr(bg);
+  }
+  const tm=document.querySelector('meta[name=theme-color]');if(tm)tm.setAttribute('content',tc);
+  applyRadius();
 }
-function applyFlags(){
-  const h=document.documentElement.classList;
-  h.toggle('no-wish',S.showWish===false);
-  h.toggle('no-share',S.showShare===false);
-  h.toggle('cols1',num(S.mobCols,2)===1);
-  h.toggle('rnd',num(S.radius,0)>0);
+function applyRadius(){
+  let el=document.getElementById('radius-css');const r=Math.max(0,Math.min(28,num(S.radius,0)));
+  if(!r){if(el)el.remove();return;}
+  if(!el){el=document.createElement('style');el.id='radius-css';document.head.appendChild(el);}
+  el.textContent='.card,.pack,.pack-media,.btn-gold,.btn-ghost,.btn-add,.pack-btn,.btn-checkout,.chip,.sz,.tailles-box,.pc-box,.pack-items,.code-row input,.code-row button{border-radius:'+r+'px}.pack-in{border-radius:'+Math.max(0,r-2)+'px}';
 }
 function applyFonts(){
   const b=FONTS[S.fontBody]?S.fontBody:'Cairo',t=FONTS[S.fontTitle]?S.fontTitle:b;
@@ -1064,7 +1064,8 @@ function applyContent(){
   document.title=S.seoTitle||(name+(S.footerSub?' — '+S.footerSub:''));
   const md=$('meta-desc');if(md&&S.seoDesc)md.content=S.seoDesc;
   const an=$('announce');
-  if(S.announceOn&&S.announceText){an.hidden=false;an.innerHTML=S.announceLink?`<a href="${E(safeHref(S.announceLink))}" target="_blank" rel="noopener">${E(S.announceText)}</a>`:E(S.announceText);}
+  if(S.closed){an.hidden=false;an.textContent='⛔ '+(S.closedMsg||'المتجر مغلق مؤقتاً — لا يمكن إرسال الطلبات حالياً');}
+  else if(S.announceOn&&S.announceText){an.hidden=false;an.innerHTML=S.announceLink?`<a href="${E(safeHref(S.announceLink))}" target="_blank" rel="noopener">${E(S.announceText)}</a>`:E(S.announceText);}
   else an.hidden=true;
   const fb=$('f-brand');fb.textContent=name;fb.classList.toggle('latin',/^[\x20-\x7E]+$/.test(name));
   $('f-sub').textContent=S.footerSub||'';
@@ -1082,9 +1083,6 @@ function applyContent(){
   $('f-pol').hidden=!pols.length;
   $('mob-brand').textContent=name;$('mob-line').textContent=S.footerLine1||'';
   $('wa-float').hidden=S.showWaFloat===false;
-  const pb=$('paused-bar');if(pb){pb.hidden=!S.ordersPaused;pb.textContent=S.ordersPausedMsg||'';}
-  const mt=$('maint'),pv=/[?&]preview/.test(location.search);
-  if(mt){mt.hidden=!(S.maintenance&&!pv);$('maint-t').textContent=name;$('maint-m').textContent=S.maintenanceMsg||'';const mw=$('maint-wa');if(mw)mw.href='https://wa.me/'+WA;}
   buildGuide();
 }
 function openPolicy(id){
@@ -1102,8 +1100,7 @@ function buildGuide(){
 /* ════════ HOME BLOCKS ════════ */
 function getBlocks(){
   let bl=Array.isArray(S.blocks)&&S.blocks.length?S.blocks.map(b=>({...b})):DEF_SETTINGS.blocks.map(b=>({...b}));
-  ['hero','featured','catalogue','trust'].forEach(t=>{if(!bl.some(b=>b.id===t)){const d=DEF_SETTINGS.blocks.find(b=>b.id===t);bl.push({...d});}});
-  if(!bl.some(b=>b.id==='packs')){const hi=bl.findIndex(b=>b.id==='hero');bl.splice(hi+1,0,{...DEF_SETTINGS.blocks.find(b=>b.id==='packs')});}
+  ['hero','packs','featured','catalogue','trust'].forEach(t=>{if(!bl.some(b=>b.id===t)){const d=DEF_SETTINGS.blocks.find(b=>b.id===t);if(!d)return;if(t==='packs'){const hi=bl.findIndex(b=>b.id==='hero');bl.splice(hi+1,0,{...d});}else bl.push({...d});}});
   bl.forEach(b=>{
     if(b.id==='hero'&&S.showHero===false)b.on=false;
     if(b.id==='trust'&&S.showTrust===false)b.on=false;
@@ -1126,7 +1123,7 @@ function blockHTML(b){
       </section>`;
     }
     case 'featured':{
-      const ps=getP().filter(p=>p.featured===true&&!(S.hideSoldOut&&isOut(p))).slice(0,12);
+      const ps=getP().filter(p=>p.featured===true).slice(0,12);
       if(!ps.length)return '';
       return `<section class="section feat" id="featured"><div class="sec-head"><h2 class="sec-title">${E(b.title||'المنتجات المقترحة')}</h2>${b.sub?`<div class="sec-sub">${E(b.sub)}</div>`:''}</div><div class="rail" id="rail">${ps.map(p=>cardHTML(p,'f-')).join('')}</div></section>`;
     }
@@ -1140,11 +1137,7 @@ function blockHTML(b){
       if(!items.length)return '';
       return `<div class="trust" id="trust">${items.map((t,i)=>(i?'<div class="t-sep"></div>':'')+`<div class="t-item"><span class="t-icon">${E(t.icon||'')}</span><div class="t-text"><strong>${E(t.title||'')}</strong><span>${E(t.sub||'')}</span></div></div>`).join('')}</div>`;
     }
-    case 'packs':{
-      const ps=activePacks();
-      if(!ps.length)return '';
-      return `<section class="section packs" id="packs"><div class="sec-head"><h2 class="sec-title">${E(b.title||'الباكات الخاصة')}</h2>${b.sub?`<div class="sec-sub">${E(b.sub)}</div>`:''}</div><div class="pk-rail">${ps.map(packHTML).join('')}</div></section>`;
-    }
+    case 'packs':return packsHTML(b);
     case 'text':
       return `<section class="blk blk-text bg-${E(b.bg||'dark')}"><div class="blk-in">${b.title?`<h2 class="blk-title">${E(b.title)}</h2>`:''}${b.text?`<p class="blk-body">${E(b.text)}</p>`:''}${btnHTML(b)}</div></section>`;
     case 'banner':
@@ -1167,167 +1160,162 @@ function renderBlocks(){
   el.innerHTML=getBlocks().filter(b=>b.on!==false).map(blockHTML).join('');
   const hi=el.querySelector('.hero-img');if(hi)hi.style.backgroundImage='url("'+String(S.heroImage).replace(/"/g,'%22')+'")';
   el.querySelectorAll('.blk-banner[data-bg]').forEach(x=>{x.style.backgroundImage='url("'+x.dataset.bg.replace(/"/g,'%22')+'")';});
+  el.querySelectorAll('.pack-media[data-bg]').forEach(x=>{x.style.backgroundImage='url("'+x.dataset.bg.replace(/"/g,'%22')+'")';});
   buildChips();renderP();
   renderRecent();
-  packSig=packSigNow();tickPK();
+  startPacks();
   el.querySelectorAll('.card-imgs').forEach(c=>{
     const pid=+c.dataset.id;
     if(c.querySelectorAll('img').length>1)swipe(c,()=>stepImg(pid,1,c.dataset.pre||''),()=>stepImg(pid,-1,c.dataset.pre||''));
   });
 }
 
-/* ════════ SPECIAL PACKS (الباكات الخاصة) ════════ */
-const PK_STY={
-  fire:{c1:'#e8321a',c2:'#ff8a00',rgb:'255,100,20',on:'#ffffff',deco:'🔥'},
-  gold:{c1:'var(--gold)',c2:'var(--gold3)',rgb:'var(--gold-rgb)',on:'var(--on-gold)',deco:'✨'},
-  rose:{c1:'#e6357f',c2:'#ff7ab0',rgb:'230,53,127',on:'#ffffff',deco:'💖'},
-  neon:{c1:'#0099ff',c2:'#8a3cff',rgb:'80,120,255',on:'#ffffff',deco:'⚡'},
-  emerald:{c1:'#0e9f63',c2:'#37c97f',rgb:'20,170,105',on:'#ffffff',deco:'🌿'}
-};
-const pkTs=v=>{const n=Number(v);return n>0?n:0;};
-function packState(pk,now){
-  now=now||Date.now();const s=pkTs(pk.startAt),e=pkTs(pk.endAt);
-  if(s&&now<s)return 'soon';
-  if(e&&now>e)return 'ended';
+/* ════════ SPECIAL PACKS ════════ */
+const PK_BADGES={hot:['🔥','الأكثر طلباً'],new:['✨','جديد'],limited:['⏳','كمية محدودة'],sale:['💥','تخفيض'],vip:['👑','حصري']};
+const PK_STYLES=['flame','royal','rose','sale'];
+function pkTime(s,isEnd){
+  if(!s)return 0;s=String(s);
+  if(s.length<=10)s+=isEnd?'T23:59:59':'T00:00:00';
+  const t=new Date(s).getTime();return isNaN(t)?0:t;
+}
+function packStatus(pk){
+  if(!pk||pk.on===false)return 'off';
+  const now=Date.now(),s=pkTime(pk.start,false),e=pkTime(pk.end,true);
+  if(e&&now>=e)return 'ended';
+  if(s&&now<s)return pk.teaser?'soon':'hidden';
   return 'live';
 }
-function packParts(pk){
-  const all=getP(),out=[];
-  for(const it of (pk.items||[])){
-    const p=all.find(x=>x.id===it.pid);
-    if(!p)return null;
-    out.push({p,qty:Math.max(1,parseInt(it.qty)||1)});
-  }
-  return out.length?out:null;
+function packUnits(pk){
+  const all=allProducts(),u=[];
+  (pk.items||[]).forEach(it=>{
+    const p=all.find(x=>x&&x.id===it.pid),q=Math.max(1,parseInt(it.qty)||1);
+    for(let i=0;i<q;i++)u.push({pid:it.pid,p:p||null});
+  });
+  return u;
 }
-const packWas=parts=>parts.reduce((s,x)=>s+fp(x.p)*x.qty,0);
-function activePacks(){
-  return (Array.isArray(S.packs)?S.packs:[]).filter(pk=>pk&&pk.id&&pk.on!==false&&num(pk.price,0)>0&&packState(pk)==='live'&&packParts(pk));
+function packMoney(pk,units){
+  const sum=units.reduce((s,x)=>s+(x.p?fp(x.p):0),0);
+  const was=num(pk.oldPrice,0)>0?num(pk.oldPrice,0):sum;
+  const price=num(pk.price,0),save=Math.max(0,was-price);
+  return {price,was,save,pct:was>0?Math.round(save/was*100):0};
 }
-let packSig='';
-const packSigNow=()=>activePacks().map(p=>p.id).join(',');
-function packHTML(pk){
-  const parts=packParts(pk);if(!parts)return '';
-  const st=PK_STY[pk.style]||PK_STY.fire;
-  const was=packWas(parts),price=num(pk.price,0),save=Math.max(0,was-price),pct=was>0?Math.round(save/was*100):0;
-  const out=parts.some(x=>isOut(x.p));
-  const imgs=pk.image?[pk.image]:parts.map(x=>(x.p.photos||[])[0]).filter(Boolean).slice(0,4);
-  const imgHtml=imgs.map(s=>`<img src="${E(s)}" alt="" loading="lazy" decoding="async"/>`).join('');
-  const items=parts.map((x,i)=>{
-    const szs=(x.p.sizes||[]).filter(s=>!isSold(x.p,s));
-    const sel=(x.p.sizes||[]).length?`<select class="pk-sz" data-i="${i}" aria-label="المقاس"><option value="">المقاس</option>${szs.map(s=>`<option value="${E(s)}">${E(s)}</option>`).join('')}</select>`:'';
-    return `<li><span class="pk-ck">✓</span><span class="pk-nm" title="${E(x.p.name)}">${E(x.p.name)}${x.qty>1?' × '+x.qty:''}</span>${sel}</li>`;
+function packAvailable(units){return units.length>0&&units.every(x=>x.p&&!isOut(x.p));}
+function packHTML(pk,st){
+  const units=packUnits(pk),m=packMoney(pk,units);
+  const ok=st==='live'&&packAvailable(units);
+  const bd=pk.badge==='custom'?['🎁',trimTxt(pk.badgeText)]:(PK_BADGES[pk.badge]||null);
+  const ribbon=bd&&(bd[1]||pk.badge!=='custom')?`<div class="pack-ribbon"><span class="fl">${E(bd[0])}</span>${E(bd[1])}</div>`:'';
+  const uniq=[...new Set(units.map(x=>x.p&&x.p.photos&&x.p.photos[0]).filter(Boolean))].slice(0,4);
+  const media=pk.image
+    ?`<div class="pack-media" data-bg="${E(pk.image)}">${ribbon}${m.pct>0?`<div class="pack-stamp"><span>−${m.pct}%</span><small>وفّري</small></div>`:''}</div>`
+    :`<div class="pack-media collage" style="--n:${Math.max(1,uniq.length)}">${uniq.map(s=>`<img src="${E(s)}" alt="" loading="lazy" decoding="async"/>`).join('')}${ribbon}${m.pct>0?`<div class="pack-stamp"><span>−${m.pct}%</span><small>وفّري</small></div>`:''}</div>`;
+  const rows=units.map((x,i)=>{
+    const p=x.p;
+    if(!p)return `<li><span class="pi-n">منتج غير متوفر</span></li>`;
+    const th=(p.photos&&p.photos[0])?`<img src="${E(p.photos[0])}" alt="" loading="lazy" decoding="async"/>`:'<span class="pi-ph"></span>';
+    let sz='';
+    if((p.sizes||[]).length){
+      sz=st==='live'
+        ?`<select data-pk-sz="${i}" aria-label="المقاس"><option value="">المقاس</option>${p.sizes.map(s=>`<option value="${E(s)}" ${isSold(p,s)?'disabled':''}>${E(s)}${isSold(p,s)?' (نفذ)':''}</option>`).join('')}</select>`
+        :'<span class="pi-u">يُحدَّد المقاس عند الطلب</span>';
+    }else sz='<span class="pi-u">مقاس موحد</span>';
+    return `<li>${th}<span class="pi-n">${E(p.name)}</span>${sz}</li>`;
   }).join('');
-  const end=pkTs(pk.endAt);
-  const cd=(pk.showTimer!==false&&end)?`<div class="pk-cd-wrap"><div class="pk-cd-l">⏳ ينتهي العرض خلال</div><div class="pk-cd" data-pkend="${end}"><span><b data-u="d">00</b><i>يوم</i></span><span><b data-u="h">00</b><i>ساعة</i></span><span><b data-u="m">00</b><i>دقيقة</i></span><span><b data-u="s">00</b><i>ثانية</i></span></div></div>`:'';
-  return `<article class="pk${out?' out':''}" id="pk-${E(pk.id)}" style="--pk1:${st.c1};--pk2:${st.c2};--pk-rgb:${st.rgb};--pk-on:${st.on}">
-    <div class="pk-deco" aria-hidden="true">${st.deco}</div>
-    ${pk.badge?`<div class="pk-badge">${E(pk.badge)}</div>`:''}
-    <div class="pk-in">
-      <div class="pk-imgs n${Math.min(4,Math.max(1,imgs.length))}">${imgHtml}${pct>0?`<div class="pk-save">−${pct}%</div>`:''}</div>
-      <div class="pk-body">
-        <h3 class="pk-name">${E(pk.name)}</h3>
-        ${pk.desc?`<p class="pk-desc">${E(pk.desc)}</p>`:''}
-        <ul class="pk-items">${items}</ul>
-        <div class="pk-prices"><span class="pk-now">${price} ${E(cur())}</span>${save>0?`<span class="pk-was">${was} ${E(cur())}</span><span class="pk-gain">وفّري ${save} ${E(cur())}</span>`:''}</div>
-        ${cd}
-        ${pk.note?`<div class="pk-note">${E(pk.note)}</div>`:''}
-        <button type="button" class="pk-btn" data-pkadd="${E(pk.id)}" ${out?'disabled':''}>${out?'نفذ المخزون':'🛒 أضيفي الباك للسلة'}</button>
-      </div>
-    </div>
-  </article>`;
+  const target=st==='soon'?pkTime(pk.start,false):pkTime(pk.end,true);
+  const cd=target?`<div class="pack-cd" data-t="${target}"><span class="pc-l">${st==='soon'?'يبدأ العرض بعد':'ينتهي العرض خلال'}</span>${[['d','يوم'],['h','ساعة'],['m','دقيقة'],['s','ثانية']].map(([k,l])=>`<div class="pc-box"><b data-u="${k}">--</b><i>${l}</i></div>`).join('')}</div>`:'';
+  const btn=st==='soon'
+    ?'<button type="button" class="pack-btn" disabled>قريباً…</button>'
+    :`<button type="button" class="pack-btn" data-pack="${E(pk.id)}" ${ok?'':'disabled'}>${ok?'اطلبي الباك الآن':'نفذ المخزون'}</button>`;
+  const stl=PK_STYLES.includes(pk.style)?pk.style:'flame';
+  return `<article class="pack st-${stl}${(ok||st==='soon')?'':' off'}${st==='soon'?' soon':''}" id="pack-${E(pk.id)}"><div class="pack-in">${media}
+    <div class="pack-body">
+      <h3 class="pack-name">${E(pk.name)}</h3>
+      ${pk.tag?`<p class="pack-tag">${E(pk.tag)}</p>`:''}
+      <ul class="pack-items">${rows}</ul>
+      <div class="pack-prices"><span class="pk-now">${E(m.price)} ${E(cur())}</span>${m.was>m.price?`<span class="pk-was">${E(m.was)} ${E(cur())}</span><span class="pk-save">وفّري ${E(m.save)} ${E(cur())}</span>`:''}</div>
+      ${pk.note?`<div class="pack-note">${E(pk.note)}</div>`:''}
+      ${cd}${btn}
+    </div></div></article>`;
 }
-function tickPK(){
-  const now=Date.now();
-  document.querySelectorAll('.pk-cd').forEach(el=>{
-    const end=+el.dataset.pkend,d=Math.max(0,end-now);
-    const v={d:Math.floor(d/86400000),h:Math.floor(d%86400000/3600000),m:Math.floor(d%3600000/60000),s:Math.floor(d%60000/1000)};
-    for(const k in v){const b=el.querySelector('[data-u="'+k+'"]');if(b)b.textContent=String(v[k]).padStart(2,'0');}
-    const w=el.closest('.pk-cd-wrap');if(w)w.classList.toggle('urgent',d>0&&d<3600000);
+const trimTxt=v=>String(v||'').trim();
+function packsHTML(b){
+  const list=(Array.isArray(S.packs)?S.packs:[]).map(pk=>({pk,st:packStatus(pk)})).filter(x=>x.st==='live'||x.st==='soon');
+  if(!list.length)return '';
+  return `<section class="section packs-sec" id="packs"><div class="sec-head"><h2 class="sec-title">${E(b.title||'باكات خاصة')}</h2>${b.sub?`<div class="sec-sub">${E(b.sub)}</div>`:''}</div><div class="packs-grid${list.length===1?' one':''}">${list.map(x=>packHTML(x.pk,x.st)).join('')}</div></section>`;
+}
+let pkTimer=null;
+function tickPacks(){
+  let expired=false;
+  document.querySelectorAll('.pack-cd').forEach(el=>{
+    const d=(+el.dataset.t)-Date.now();
+    if(d<=0){expired=true;return;}
+    const v={d:Math.floor(d/864e5),h:Math.floor(d%864e5/36e5),m:Math.floor(d%36e5/6e4),s:Math.floor(d%6e4/1e3)};
+    el.querySelectorAll('[data-u]').forEach(b=>{const k=b.dataset.u;b.textContent=k==='d'?String(v.d):String(v[k]).padStart(2,'0');});
+    el.classList.toggle('urgent',d<864e5&&!el.closest('.soon'));
   });
-  const sig=packSigNow();
-  if(sig!==packSig){packSig=sig;renderBlocks();}
+  if(expired){clearInterval(pkTimer);pkTimer=null;renderBlocks();}
 }
-function addPack(id){
+function startPacks(){
+  clearInterval(pkTimer);pkTimer=null;
+  if(document.querySelector('.pack-cd')){tickPacks();if(document.querySelector('.pack-cd')&&!pkTimer)pkTimer=setInterval(tickPacks,1000);}
+}
+function addPack(id,btn){
   S=getS();
-  const pk=(Array.isArray(S.packs)?S.packs:[]).find(x=>x&&x.id===id);
-  if(!pk||pk.on===false||packState(pk)!=='live'){toast('انتهى هذا العرض');renderBlocks();return;}
-  const parts=packParts(pk);if(!parts){toast('هذا الباك غير متوفر حالياً');return;}
-  if(parts.some(x=>isOut(x.p))){toast('الباك غير متوفر حالياً');return;}
-  const card=document.getElementById('pk-'+id);
-  const sizes=[];let miss=false;
-  parts.forEach((x,i)=>{
-    if((x.p.sizes||[]).length){
-      const sel=card?card.querySelector('.pk-sz[data-i="'+i+'"]'):null;
-      const v=sel?sel.value:'';
-      if(!v){miss=true;if(sel)sel.classList.add('err');}
-      sizes.push(v);
-    }else sizes.push('');
+  if(S.closed){toast(S.closedMsg||'المتجر مغلق مؤقتاً — الطلبات متوقفة حالياً');return;}
+  const pk=(Array.isArray(S.packs)?S.packs:[]).find(x=>x&&x.id===id);if(!pk)return;
+  if(packStatus(pk)!=='live'){toast('انتهى هذا العرض');renderBlocks();return;}
+  const units=packUnits(pk);
+  if(!packAvailable(units)){toast('هذا الباك غير متوفر حالياً');return;}
+  const art=btn.closest('.pack'),chosen=units.map(()=>'');let bad=null;
+  art.querySelectorAll('select[data-pk-sz]').forEach(s=>{
+    s.classList.remove('err');chosen[+s.dataset.pkSz]=s.value;
+    if(!s.value){s.classList.add('err');if(!bad)bad=s;}
   });
-  if(miss){toast('اختاري المقاس لكل قطعة في الباك');return;}
-  const summary=parts.map((x,i)=>x.p.name+(sizes[i]?' ('+sizes[i]+')':'')+(x.qty>1?' ×'+x.qty:'')).join(' + ');
-  const key='pack:'+id,price=num(pk.price,0);
-  const ex=cart.find(c=>c.pid===key&&c.sz===summary);
+  if(bad){bad.scrollIntoView({block:'center',behavior:'smooth'});toast('اختاري المقاس لكل قطعة في الباك');return;}
+  for(let i=0;i<units.length;i++){if(chosen[i]&&isSold(units[i].p,chosen[i])){toast('أحد المقاسات المختارة نفذ');return;}}
+  const m=packMoney(pk,units);
+  const desc=units.map((u,i)=>u.p.name+(chosen[i]?' ('+chosen[i]+')':'')).join(' + ');
+  const key='pack:'+pk.id;
+  const ex=cart.find(c=>c.pid===key&&c.sz===desc);
   if(ex)ex.qty++;
-  else cart.push({pid:key,pack:true,packId:id,name:'📦 '+pk.name,sz:summary,price,origPrice:packWas(parts),cat:'__pack',photo:(pk.image||(parts[0].p.photos||[])[0]||''),qty:1});
-  updateN();toast('أضيف الباك للسلة ✓');
-  setTimeout(openCart,380);
+  else cart.push({pid:key,pack:true,name:'📦 '+pk.name,sz:desc,price:m.price,origPrice:m.was||m.price,cat:'__pack',photo:(units[0].p.photos&&units[0].p.photos[0])||'',qty:1});
+  updateN();toast('أضيف الباك للسلة ✓');setTimeout(openCart,380);
 }
-/* يحذف من السلة الباكات المنتهية ويحدّث ثمن الباقي — يرجع عدد المحذوف */
-function syncPackCart(){
-  S=getS();let removed=0,ch=false;
-  cart=cart.filter(c=>{
-    if(!c||!c.pack)return true;
-    const pk=(Array.isArray(S.packs)?S.packs:[]).find(x=>x&&x.id===c.packId);
-    if(!pk||pk.on===false||packState(pk)!=='live'||!packParts(pk)||!(num(pk.price,0)>0)){removed++;ch=true;return false;}
-    const p=num(pk.price,0);if(c.price!==p){c.price=p;ch=true;}
-    return true;
-  });
-  if(ch)updateN();
-  return removed;
-}
-function checkoutBlocked(){
-  S=getS();
-  if(S.ordersPaused){toast(S.ordersPausedMsg||'استقبال الطلبات متوقف مؤقتاً');return true;}
-  const mn=num(S.minOrder,0);
-  if(mn>0){const calc=calcCart(cart,appliedCode);if(calc.afterDisc<mn){toast('الحد الأدنى للطلب '+mn+' '+cur());return true;}}
-  return false;
-}
-$('blocks').addEventListener('click',e=>{const b=e.target.closest('[data-pkadd]');if(b)addPack(b.dataset.pkadd);});
-$('blocks').addEventListener('change',e=>{if(e.target.classList&&e.target.classList.contains('pk-sz'))e.target.classList.remove('err');});
 
-/* ════════ WELCOME POPUP ════════ */
-const welKey=()=>{const s=[S.welcomeTitle,S.welcomeText,S.welcomeCode,S.welcomeBtn].join('|');let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0;return 'w'+h;};
-function maybeWelcome(){
-  S=getS();
-  if(!S.welcomeOn||!(S.welcomeTitle||S.welcomeText))return;
-  const pv=/[?&]preview/.test(location.search);
-  if(S.maintenance&&!pv)return;
-  let seen='';try{seen=localStorage.getItem('olira_wel')||'';}catch(e){}
-  if(seen===welKey()&&!pv)return;
-  setTimeout(()=>{
-    if(document.querySelector('.det-ov.open,.cart-drw.open,.quick-ov.open'))return;
-    $('wel-t').textContent=S.welcomeTitle||'';
-    $('wel-m').textContent=S.welcomeText||'';
-    const c=$('wel-code');c.hidden=!S.welcomeCode;c.textContent=S.welcomeCode||'';
-    $('wel-btn').textContent=S.welcomeBtn||(S.welcomeCode?'استعملي الكود':'تسوقي الآن');
-    $('wel-ov').classList.add('open');syncLock();
-  },Math.max(0,num(S.welcomeDelay,3))*1000);
+/* ════════ ENTRY POPUP ════════ */
+function hashStr(s){let h=5381;for(let i=0;i<s.length;i++)h=((h<<5)+h+s.charCodeAt(i))|0;return (h>>>0).toString(36);}
+let popTimer=null,popShown=false;
+function setupPopup(){
+  const P=S.popup;clearTimeout(popTimer);
+  if(!P||!P.on||popShown||!(P.title||P.text))return;
+  const key='olira_pop_'+hashStr([P.title,P.text,P.code,P.btnText,P.btnLink].join('|'));
+  if(P.once!==false){try{if(localStorage.getItem(key))return;}catch(e){}}
+  popTimer=setTimeout(()=>{
+    if(document.querySelector('.det-ov.open,.cart-drw.open,.quick-ov.open,.zoom-ov.open'))return;
+    $('pop-title').textContent=P.title||'';$('pop-text').textContent=P.text||'';
+    const c=normCode(P.code);
+    $('pop-code').hidden=!c;$('pop-code').textContent=c;$('pop-copy').hidden=!c;
+    const b=$('pop-btn');
+    if(P.btnText){b.hidden=false;b.textContent=P.btnText;b.href=safeHref(P.btnLink||'#catalogue');
+      b.onclick=function(){closePop();};
+      if(/^https?:/i.test(P.btnLink||'')){b.target='_blank';b.rel='noopener';}else{b.removeAttribute('target');}
+    }else b.hidden=true;
+    $('pop-ov').classList.add('open');syncLock();popShown=true;
+    try{localStorage.setItem(key,'1');}catch(e){}
+  },Math.max(1,num(P.delay,4))*1000);
 }
-function closeWelcome(go){
-  $('wel-ov').classList.remove('open');syncLock();
-  try{localStorage.setItem('olira_wel',welKey());}catch(e){}
-  if(go){
-    if(S.welcomeCode){appliedCode=normCode(S.welcomeCode);lsSet('olira_code',appliedCode);toast('تم حفظ الكود ✓ سيُطبَّق في سلتك');}
-    toCat();
-  }
+function closePop(){$('pop-ov').classList.remove('open');syncLock();}
+function popUseCode(){
+  const c=normCode((S.popup||{}).code);if(!c)return;
+  appliedCode=c;lsSet('olira_code',c);
+  try{if(navigator.clipboard)navigator.clipboard.writeText(c);}catch(e){}
+  closePop();toast('تم تطبيق الكود '+c+' ✓ — سيظهر في السلة');
 }
 
 /* ════════ RECENTLY VIEWED ════════ */
 function renderRecent(){
   const host=$('blocks');if(!host)return;
   const old=$('recent');if(old)old.remove();
-  if(S.showRecent===false)return;
   const ids=lsGet('olira_recent',[]);
   const all=getP();
   const ps=(Array.isArray(ids)?ids:[]).map(id=>all.find(p=>p.id===id)).filter(Boolean).slice(0,8);
@@ -1346,11 +1334,12 @@ function renderRecent(){
 
 /* ════════ LAYERS / SCROLL LOCK ════════ */
 function syncLock(){
-  const open=document.querySelector('.det-ov.open,.cart-drw.open,.quick-ov.open,.mob-drawer.open,.zoom-ov.open,.tailles-ov.open,.search-ov.open,.pol-ov.open,.wel-ov.open');
+  const open=document.querySelector('.det-ov.open,.cart-drw.open,.quick-ov.open,.mob-drawer.open,.zoom-ov.open,.tailles-ov.open,.search-ov.open,.pol-ov.open');
   document.body.style.overflow=open?'hidden':'';
 }
 document.addEventListener('keydown',e=>{
   if(e.key!=='Escape')return;
+  if($('pop-ov').classList.contains('open'))return closePop();
   if($('zoom-ov').classList.contains('open'))return closeZoom();
   if($('pol-ov').classList.contains('open'))return closePolicy();
   if($('tailles-ov').classList.contains('open'))return closeTailles();
@@ -1449,7 +1438,6 @@ function cardHTML(p,pre){
 function renderP(){
   const g=$('grid');if(!g)return;
   let ps=getP();
-  if(S.hideSoldOut)ps=ps.filter(p=>!isOut(p));
   if(curF==='__wish')ps=ps.filter(p=>wish.includes(p.id));
   else if(curF!=='all')ps=ps.filter(p=>(p.category||'').trim()===curF);
   const q=normC(curQ);
@@ -1467,6 +1455,7 @@ function renderP(){
   startCD();
 }
 $('blocks').addEventListener('click',e=>{
+  const pb=e.target.closest('[data-pack]');if(pb){addPack(pb.dataset.pack,pb);return;}
   const t=e.target.closest('[data-act]');if(!t)return;
   const a=t.dataset.act,id=+t.dataset.id,pre=t.dataset.pre||'';
   if(a==='open'){const box=t.closest('.card-imgs');if(box&&box._sw&&Date.now()-box._sw<450)return;openDet(id);}
@@ -1548,7 +1537,7 @@ function applyCode(){
 function removeCode(){appliedCode='';lsSet('olira_code','');renderCart();}
 function upsellMsg(calc){
   S=getS();
-  const tq=cart.filter(c=>!c.pack).reduce((s,c)=>s+c.qty,0);
+  const tq=cart.reduce((s,c)=>s+c.qty,0);
   if(tq===1&&num(S.disc2,3)>0)return 'أضيفي قطعة أخرى ← خصم '+num(S.disc2,3)+'%!';
   if(tq===2&&num(S.disc3,5)>0)return 'أضيفي قطعة أخرى ← خصم '+num(S.disc3,5)+'%!';
   const th=freeThreshold();
@@ -1556,15 +1545,14 @@ function upsellMsg(calc){
   return '';
 }
 function renderCart(showMsg){
-  if(syncPackCart()>0)toast('انتهى عرض أحد الباكات وأُزيل من السلة');
   const ci=$('cart-items'),cf=$('cart-ft');
   if(!cart.length){ci.innerHTML='<div class="cart-empty"><span>🛒</span>سلتك فارغة</div>';cf.innerHTML='';return;}
   ci.innerHTML=cart.map((c,i)=>`<div class="c-item">
     ${c.photo?`<img class="c-img" src="${E(c.photo)}" alt=""/>`:'<div class="c-img"></div>'}
     <div class="c-info">
       <div class="c-name">${E(c.name)}</div>
-      <div class="c-meta">${c.pack?'يحتوي على: ':'المقاس: '}${E(c.sz||'—')}</div>
-      <div class="c-price">${c.price} ${E(cur())} / ${c.pack?'باك':'قطعة'}</div>
+      <div class="c-meta">${c.pack?'يتضمن':'المقاس'}: ${E(c.sz||'—')}</div>
+      <div class="c-price">${c.price} ${E(cur())} / قطعة</div>
       <div class="qty-row">
         <button class="c-rm" onclick="rmItem(${i})">🗑 حذف</button>
         <button class="qty-b" onclick="chgQ(${i},1)" aria-label="زيادة">+</button>
@@ -1592,9 +1580,7 @@ function renderCart(showMsg){
     <div class="deliv-hint">${E(delivHint())}</div>
     ${shipBar}
     ${up?`<div class="upsell">🎁 ${E(up)}</div>`:''}
-    ${S.ordersPaused?`<div class="upsell" style="border-color:var(--danger);color:var(--danger)">⏸️ ${E(S.ordersPausedMsg||'استقبال الطلبات متوقف مؤقتاً')}</div>`:''}
-    ${(num(S.minOrder,0)>0&&calc.afterDisc<num(S.minOrder,0))?`<div class="upsell">⚠️ الحد الأدنى للطلب: ${num(S.minOrder,0)} ${E(cur())}</div>`:''}
-    <button class="btn-checkout" onclick="openCo()" ${S.ordersPaused?'disabled':''}>اطلبي عبر واتساب</button>`;
+    <button class="btn-checkout" onclick="openCo()">اطلبي عبر واتساب</button>`;
 }
 function chgQ(i,d){cart[i].qty=Math.max(1,cart[i].qty+d);renderCart();updateN();}
 function rmItem(i){cart.splice(i,1);renderCart();updateN();}
@@ -1741,8 +1727,8 @@ function curCity(){const s=$('qc');if(!s)return '';if(s.value==='__other'){const
 function onCityChange(){const s=$('qc');const w=$('qco-wrap');if(w)w.style.display=(s&&s.value==='__other')?'flex':'none';qCalc();}
 function openCo(){if(!cart.length)return;closeCart();showQuickForm();}
 function showQuickForm(){
-  syncPackCart();if(!cart.length||checkoutBlocked())return;
   S=getS();
+  if(S.closed){toast(S.closedMsg||'المتجر مغلق مؤقتاً — الطلبات متوقفة حالياً');return;}
   const calc=calcCart(cart,appliedCode);
   $('qs').innerHTML=cart.map(c=>`<div class="qs-item"><span>${E(c.name)} ×${c.qty} (${E(c.sz||'—')})</span><span>${c.price*c.qty} ${E(cur())}</span></div>`).join('')
     +(calc.auto?`<div class="qs-disc">🎁 ${E(calc.auto.label)} −${calc.auto.amount} ${E(cur())}</div>`:'')
@@ -1773,8 +1759,6 @@ let _sending=false;
 function submitQuick(){
   if(_sending)return;
   S=getS();
-  syncPackCart();if(!cart.length){toast('السلة فارغة');return;}
-  if(checkoutBlocked())return;
   const n=$('qn').value.trim();
   const p=normPhone($('qp').value);
   const c=curCity();
@@ -1802,7 +1786,7 @@ function submitQuick(){
   msg+='👤 *الاسم:* '+n+'\n📞 *الهاتف:* '+p+'\n📍 *المدينة:* '+c+'\n🏠 *العنوان:* '+a+'\n';
   if(note)msg+='📝 *ملاحظة:* '+note+'\n';
   msg+='\n*المنتجات:*\n';
-  cart.forEach(x=>{msg+='• '+x.name+' × '+x.qty+' — '+(x.pack?'يحتوي على: ':'المقاس: ')+(x.sz||'—')+' — '+x.price*x.qty+' '+C+'\n';});
+  cart.forEach(x=>{msg+='• '+x.name+' × '+x.qty+(x.pack?' — يتضمن: ':' — المقاس: ')+(x.sz||'—')+' — '+x.price*x.qty+' '+C+'\n';});
   if(calc.auto)msg+='\n🎁 '+calc.auto.label+': −'+calc.auto.amount+' '+C;
   if(calc.code&&calc.code.amount>0)msg+='\n🏷️ '+calc.code.label+': −'+calc.code.amount+' '+C;
   msg+='\n🚚 التوصيل ('+c+'): '+(deliv>0?'+'+deliv+' '+C:'مجاني');
@@ -1855,14 +1839,13 @@ function seed(){
 /* ════════ INIT ════════ */
 function applySettings(){
   S=getS();WA=S.wa||DEF_SETTINGS.wa;
-  applyTheme();applyFonts();applyFlags();
+  applyTheme();applyFonts();
   renderBlocks();applyBrand();applyContent();
   ['mob-wa','f-wa','wa-float'].forEach(id=>{const a=$(id);if(!a)return;a.href='https://wa.me/'+WA;if(id!=='wa-float')a.textContent=fmtPhone(WA);});
 }
 $('f-pol').addEventListener('click',e=>{const b=e.target.closest('[data-pol]');if(b)openPolicy(b.dataset.pol);});
 function init(){
-  seed();applySettings();updateN();maybeWelcome();setInterval(tickPK,1000);
-  if(/[?&]preview/.test(location.search)&&S.maintenance)setTimeout(()=>toast('🚧 وضع المعاينة: الموقع مغلق للزوار حالياً'),700);
+  seed();applySettings();updateN();setupPopup();
   const m=/^#p=(\d+)/.exec(location.hash);
   if(m)setTimeout(()=>openDet(+m[1]),300);
   else if(location.hash==='#catalogue')setTimeout(toCat,50);
